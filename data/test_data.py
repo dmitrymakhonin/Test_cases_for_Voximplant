@@ -211,3 +211,37 @@ input(client_id=random_value(10),item_ids=[random_value(2)],
         order_list=[[1,[2,12,12],1,1],[1,[2,12,12],2,2],[1,[1,12,12],3,3]],
         client_list=[1,2,3,4,5,6], item_list=[1,2,3,4]) for i in range(5)
 ]
+
+#====================================================================================================
+# тесты с пустыми данными
+# пустой список клиентов
+empty_client_list=[
+input(client_id=1,item_ids=[2,1],
+        order_list=[[1,[2,12,12],1,1],[1,[2,12,12],2,2],[1,[1,12,12],3,3]],
+        client_list=[], item_list=[1,2,3,4]),
+input(client_id=2,item_ids=[6,1],
+        order_list=[],
+        client_list=[], item_list=[1,2,3,4]),
+input(client_id=2,item_ids=[6,1],
+        order_list=[[1,[2,12,12],1,1],[1,[2,12,12],2,2],[1,[1,12,12],3,3]],
+        client_list=[], item_list=[]),
+input(client_id=2,item_ids=[6,1],
+        order_list=[],
+        client_list=[], item_list=[])
+]
+# пустой список итемов
+empty_items_list=[
+input(client_id=1,item_ids=[2,1],
+        order_list=[[1,[2,12,12],1,1],[1,[2,12,12],2,2],[1,[1,12,12],3,3]],
+        client_list=[1,2,3,4,5,6], item_list=[]),
+input(client_id=2,item_ids=[6,1],
+        order_list=[],
+        client_list=[1,2,3,4,5,6], item_list=[]),
+]
+
+# пустой список ордеров
+empty_orders_list=[
+input(client_id=1,item_ids=[2,1],
+        order_list=[],
+        client_list=[1,2,3,4,5,6], item_list=[1,2,3,4]),
+]

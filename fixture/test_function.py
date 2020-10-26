@@ -8,11 +8,11 @@ import jsonpickle
 class Test_function:
     def my_request(input):
         if Test_function.clients(input.client_list)==True:
-            return print("В системе нет клиентов")
+            return "В системе нет клиентов"
         if Test_function.items(input.item_list)==True:
-            return print("В системе нет итемов")
+            return "В системе нет итемов"
         if Test_function.orders(input.order_list)==True:
-            return print("В системе нет ордеров")
+            return "В системе нет ордеров"
         Response = []
         list_of_ids_clients=[]
         new_order_list = []
